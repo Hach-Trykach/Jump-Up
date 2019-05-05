@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: b6bcc8a6d3d51d842bd04253ab5d1caa
+timeCreated: 1502533349
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - soundOn: {instanceID: 0}
+  - soundOff: {instanceID: 0}
+  - musicOn: {instanceID: 0}
+  - musicOff: {instanceID: 0}
+  - buttons: {instanceID: 0}
+  - shopCubes: {instanceID: 0}
+  - shopBGs: {instanceID: 0}
+  - shopMusics: {instanceID: 0}
+  - gameName: {instanceID: 0}
+  - tapToPlay: {instanceID: 0}
+  - shopBackground: {instanceID: 0}
+  - mainCube: {instanceID: 0}
+  - detectClicks: {instanceID: 0}
+  - whichCube: {instanceID: 0}
+  - shopBtn: {instanceID: 0}
+  - achivBtn: {instanceID: 0}
+  - leaderBtn: {instanceID: 0}
+  - settingsBtn: {instanceID: 0}
+  - musicBtn: {instanceID: 0}
+  - soundBtn: {instanceID: 0}
+  - vkBtn: {instanceID: 0}
+  - backBtn: {instanceID: 0}
+  - selectBtn: {instanceID: 0}
+  - buyBtn: {instanceID: 0}
+  - restartBtn: {instanceID: 0}
+  - sCubesBtn: {instanceID: 0}
+  - sBgBtn: {instanceID: 0}
+  - sMusicBtn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

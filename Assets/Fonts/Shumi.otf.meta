@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 138eb323be8e001419e17b14444d6bbe
+timeCreated: 1498298547
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Shumi
+  fontNames:
+  - Shumi
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
