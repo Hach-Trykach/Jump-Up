@@ -1,27 +1,25 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class ScrollSpace : MonoBehaviour {
 
-	public GameObject shopCubes;
+	public GameObject Cubes;
+    public bool slide;
 	private Vector3 screenPoint, offset, fPos, sPos;
 	private float lockedYPos;
+    private float peremen = 1;
     
-	void Update () {
-        if (shopCubes.transform.position.x > 100 + 1.87)
-        {
-            shopCubes.transform.position = Vector3.Lerp(shopCubes.transform.position, new Vector3(100 + 1.87f, shopCubes.transform.position.y, shopCubes.transform.position.z), Time.deltaTime * 10f);
-        }
-        else if (shopCubes.transform.position.x < 100 - 12.1f)
-        {
-            shopCubes.transform.position = Vector3.Lerp(shopCubes.transform.position, new Vector3(100 - 12.1f, shopCubes.transform.position.y, shopCubes.transform.position.z), Time.deltaTime * 10f);
-        }
-	}
+	void Update ()
+    {
+        if (Cubes.transform.position.x > transform.position.x + 1.87) Cubes.transform.position = Vector3.Lerp(Cubes.transform.position, new Vector3(transform.position.x + 1.87f, Cubes.transform.position.y, Cubes.transform.position.z), Time.deltaTime * 10f);
+        else if (Cubes.transform.position.x < transform.position.x - 12.1f) Cubes.transform.position = Vector3.Lerp(Cubes.transform.position, new Vector3(transform.position.x - 12.1f, Cubes.transform.position.y, Cubes.transform.position.z), Time.deltaTime * 10f);
+    }
 
     void OnMouseDown()
     {
-        fPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));//
+        fPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
         lockedYPos = screenPoint.x + 0.4f;
-        offset = shopCubes.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+        offset = Cubes.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
         Cursor.visible = false;
     }
 
@@ -30,20 +28,14 @@ public class ScrollSpace : MonoBehaviour {
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         curPosition.y = lockedYPos;
-        shopCubes.transform.position = curPosition;
+        Cubes.transform.position = curPosition;
     }
 
     void OnMouseUp()
     {
-        sPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));//
+        sPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+        if (fPos.x > sPos.x) Cubes.GetComponent<Rigidbody>().AddForce(Cubes.transform.right * Time.deltaTime * -(fPos.x - sPos.x) * 100f);
+        else if (fPos.x < sPos.x) Cubes.GetComponent<Rigidbody>().AddForce(Cubes.transform.right * Time.deltaTime * (sPos.x - fPos.x) * 100f);
         Cursor.visible = true;
-        if (fPos.x > sPos.x)//
-        {
-            shopCubes.GetComponent<Rigidbody>().AddForce(shopCubes.transform.right * Time.deltaTime * -(fPos.x - sPos.x) * 100f);//
-        }
-        else if (fPos.x < sPos.x)//
-        {
-            shopCubes.GetComponent<Rigidbody>().AddForce(shopCubes.transform.right * Time.deltaTime * (sPos.x - fPos.x) * 100f);//
-        }
     }
 }

@@ -13,9 +13,9 @@ public class Buttons : MonoBehaviour
     public Text diamondsText;
     public AudioClip collectDiamond;
     public Sprite soundOn, soundOff, musicOn, musicOff;
-    public GameObject buttons, shopCubes, shopBGs, shopMusics, gameName, tapToPlay, allCubes;
-    public GameObject shopBackground, loseBackground, mainCube, detectClicks, whichCube, whichBg, whichMusic;
-    public GameObject shopBtn, achivBtn, leaderBtn, settingsBtn, musicBtn, soundBtn, vkBtn, backBtn, selectBtn, buyBtn, restartBtn, sCubesBtn, sBgBtn, sMusicBtn, siteBtn, WatchAdForDiamondBtn, continueBtn, gift, giftImage, giftTimerText, diamonds;
+    public GameObject buttons, shopCubes, shopBGs, shopMusics, gameName, tapToPlay, allCubes, shopBackground, loseBackground, mainCube, detectClicks, whichCube, whichBg, whichMusic, 
+        shopBtn, achivBtn, leaderBtn, settingsBtn, musicBtn, soundBtn, vkBtn, backBtn, selectBtn, buyBtn, restartBtn, sCubesBtn, sBgBtn, sMusicBtn, siteBtn, WatchAdForDiamondBtn, 
+        continueBtn, gift, giftImage, giftTimerText, diamonds;
 
     void Start()
     {
@@ -78,60 +78,24 @@ public class Buttons : MonoBehaviour
         switch (gameObject.name)
         {
             case "Shop":
-                if (sCubesBtn.transform.localScale.x == 1f)
-                {
-                    sCubesBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
-                }
-                if (sBgBtn.transform.localScale.x != 1f)
-                {
-                    sBgBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                if (sMusicBtn.transform.localScale.x != 1f)
-                {
-                    sMusicBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
+                if (sCubesBtn.transform.localScale.x == 1f) sCubesBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
+                if (sBgBtn.transform.localScale.x != 1f) sBgBtn.transform.localScale = new Vector3(1f, 1f, 1f);
+                if (sMusicBtn.transform.localScale.x != 1f) sMusicBtn.transform.localScale = new Vector3(1f, 1f, 1f);
                 break;
             case "Cubes":
-                if (sCubesBtn.transform.localScale.x == 1f)
-                {
-                    sCubesBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
-                }
-                if (sBgBtn.transform.localScale.x != 1f)
-                {
-                    sBgBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                if (sMusicBtn.transform.localScale.x != 1f)
-                {
-                    sMusicBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
+                if (sCubesBtn.transform.localScale.x == 1f) sCubesBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
+                if (sBgBtn.transform.localScale.x != 1f) sBgBtn.transform.localScale = new Vector3(1f, 1f, 1f);
+                if (sMusicBtn.transform.localScale.x != 1f) sMusicBtn.transform.localScale = new Vector3(1f, 1f, 1f);
                 break;
             case "Backgrounds":
-                if (sCubesBtn.transform.localScale.x != 1f)
-                {
-                    sCubesBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                if (sBgBtn.transform.localScale.x == 1f)
-                {
-                    sBgBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
-                }
-                if (sMusicBtn.transform.localScale.x != 1f)
-                {
-                    sMusicBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
+                if (sCubesBtn.transform.localScale.x != 1f) sCubesBtn.transform.localScale = new Vector3(1f, 1f, 1f);
+                if (sBgBtn.transform.localScale.x == 1f) sBgBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
+                if (sMusicBtn.transform.localScale.x != 1f) sMusicBtn.transform.localScale = new Vector3(1f, 1f, 1f);
                 break;
             case "Musics":
-                if (sCubesBtn.transform.localScale.x != 1f)
-                {
-                    sCubesBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                if (sBgBtn.transform.localScale.x != 1f)
-                {
-                    sBgBtn.transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                if (sMusicBtn.transform.localScale.x == 1f)
-                {
-                    sMusicBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
-                }
+                if (sCubesBtn.transform.localScale.x != 1f) sCubesBtn.transform.localScale = new Vector3(1f, 1f, 1f);
+                if (sBgBtn.transform.localScale.x != 1f) sBgBtn.transform.localScale = new Vector3(1f, 1f, 1f);
+                if (sMusicBtn.transform.localScale.x == 1f) sMusicBtn.transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
                 break;
         }
     }
@@ -186,9 +150,7 @@ public class Buttons : MonoBehaviour
                 //PlayerPrefs.SetString ("M4", "null");
                 //PlayerPrefs.SetString ("M5", "null");
                 //PlayerPrefs.SetString ("M6", "null");
-
                 ////////////////////////////////////////////////////////
-
                 break;
             case "Site":
                 Camera.main.GetComponent<AudioSource>().Stop();
@@ -285,22 +247,10 @@ public class Buttons : MonoBehaviour
                         for (int i = 0; i < soundBtn.transform.parent.transform.childCount; i++)
                             soundBtn.transform.parent.transform.GetChild(i).gameObject.SetActive(!soundBtn.transform.parent.transform.GetChild(i).gameObject.activeSelf);
                     }
-                    if (gift.activeSelf)
-                    {
-                        gift.SetActive(false);
-                    }
-                    else
-                    {
-                        gift.SetActive(true);
-                    }
-                    if (giftTimerText.activeSelf && GiftTimer.timerScore >= 0)
-                    {
-                        giftTimerText.SetActive(false);
-                    }
-                    else if (!giftTimerText.activeSelf && GiftTimer.timerScore > 0)
-                    {
-                        giftTimerText.SetActive(true);
-                    }
+                    if (gift.activeSelf) gift.SetActive(false);
+                    else gift.SetActive(true);
+                    if (giftTimerText.activeSelf && GiftTimer.timerScore >= 0) giftTimerText.SetActive(false);
+                    else if (!giftTimerText.activeSelf && GiftTimer.timerScore > 0) giftTimerText.SetActive(true);
                     if (gameName.activeSelf)
                     {
                         gameName.SetActive(false);
@@ -332,12 +282,7 @@ public class Buttons : MonoBehaviour
                 shopBGs.SetActive(false);
                 shopMusics.SetActive(false);
                 Camera.main.transform.position = new Vector3(100f, Camera.main.transform.position.y, Camera.main.transform.position.z);
-                if (PlayerPrefs.GetInt("QuantityCubes") >= 7)
-                {
-                    Social.ReportProgress("CgkI9dLv-YcUEAIQBw", 100.0f, (bool success) =>
-                    {
-                    });
-                }
+                if (PlayerPrefs.GetInt("QuantityCubes") >= 7) Social.ReportProgress("CgkI9dLv-YcUEAIQBw", 100.0f, (bool success) => {});
                 break;
             case "Backgrounds":
                 Camera.main.GetComponent<AudioSource>().Stop();
@@ -345,12 +290,7 @@ public class Buttons : MonoBehaviour
                 shopBGs.SetActive(true);
                 shopMusics.SetActive(false);
                 Camera.main.transform.position = new Vector3(200f, Camera.main.transform.position.y, Camera.main.transform.position.z);
-                if (PlayerPrefs.GetInt("QuantityBGs") >= 6)
-                {
-                    Social.ReportProgress("CgkI9dLv-YcUEAIQCA", 100.0f, (bool success) =>
-                    {
-                    });
-                }
+                if (PlayerPrefs.GetInt("QuantityBGs") >= 6) Social.ReportProgress("CgkI9dLv-YcUEAIQCA", 100.0f, (bool success) => {});
                 break;
             case "Musics":
                 Camera.main.GetComponent<AudioSource>().Stop();
@@ -358,12 +298,7 @@ public class Buttons : MonoBehaviour
                 shopBGs.SetActive(false);
                 shopMusics.SetActive(true);
                 Camera.main.transform.position = new Vector3(300f, Camera.main.transform.position.y, Camera.main.transform.position.z);
-                if (PlayerPrefs.GetInt("Musics") >= 5)
-                {
-                    Social.ReportProgress("CgkI9dLv-YcUEAIQCQ", 100.0f, (bool success) =>
-                    {
-                    });
-                }
+                if (PlayerPrefs.GetInt("Musics") >= 5) Social.ReportProgress("CgkI9dLv-YcUEAIQCQ", 100.0f, (bool success) => {});
                 break;
             case "Achievements":
                 if (GiftTimer.giftReceived)
@@ -388,22 +323,10 @@ public class Buttons : MonoBehaviour
                     for (int i = 0; i < soundBtn.transform.parent.transform.childCount; i++)
                         soundBtn.transform.parent.transform.GetChild(i).gameObject.SetActive(!soundBtn.transform.parent.transform.GetChild(i).gameObject.activeSelf);
                 }
-                if (gift.activeSelf)
-                {
-                    gift.SetActive(false);
-                }
-                else
-                {
-                    gift.SetActive(true);
-                }
-                if (giftTimerText.activeSelf && GiftTimer.timerScore >= 0)
-                {
-                    giftTimerText.SetActive(false);
-                }
-                else if (!giftTimerText.activeSelf && GiftTimer.timerScore > 0)
-                {
-                    giftTimerText.SetActive(true);
-                }
+                if (gift.activeSelf) gift.SetActive(false);
+                else gift.SetActive(true);
+                if (giftTimerText.activeSelf && GiftTimer.timerScore >= 0) giftTimerText.SetActive(false);
+                else if (!giftTimerText.activeSelf && GiftTimer.timerScore > 0) giftTimerText.SetActive(true);
                 if (gameName.activeSelf)
                 {
                     gameName.SetActive(false);
@@ -484,14 +407,8 @@ public class Buttons : MonoBehaviour
         mainCube.SetActive(true);
         mainCube.GetComponent<Rigidbody>().isKinematic = true;
         mainCube.GetComponent<Rigidbody>().isKinematic = false;
-        if (CubeJump.count_blocks == 1)
-        {
-            mainCube.transform.position = new Vector3(allCubes.transform.GetChild(1).position.x, allCubes.transform.GetChild(1).position.y + 2, 0f);
-        }
-        else
-        {
-            mainCube.transform.position = new Vector3(allCubes.transform.GetChild(2).position.x, allCubes.transform.GetChild(2).position.y + 2, 0f);
-        }
+        if (CubeJump.count_blocks == 1) mainCube.transform.position = new Vector3(allCubes.transform.GetChild(1).position.x, allCubes.transform.GetChild(1).position.y + 2, 0f);
+        else mainCube.transform.position = new Vector3(allCubes.transform.GetChild(2).position.x, allCubes.transform.GetChild(2).position.y + 2, 0f);
         mainCube.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         CubeJump.lose = false;
         CubeJump.adsLose = false;
@@ -518,17 +435,8 @@ public class Buttons : MonoBehaviour
             PlayerPrefs.SetInt("Diamonds", PlayerPrefs.GetInt("Diamonds") + 4);
             SceneManager.LoadScene("Main");
         }
-        else if (result == ShowResult.Finished && ADS == 2)
-        {
-            ResumeGame();
-        }
-        else if (result == ShowResult.Skipped)
-        {
-            SceneManager.LoadScene("Main");
-        }
-        else if (result == ShowResult.Failed)
-        {
-            SceneManager.LoadScene("Main");
-        }
+        else if (result == ShowResult.Finished && ADS == 2) ResumeGame();
+        else if (result == ShowResult.Skipped) SceneManager.LoadScene("Main");
+        else if (result == ShowResult.Failed) SceneManager.LoadScene("Main");
     }
 }

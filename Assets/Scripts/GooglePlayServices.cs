@@ -49,10 +49,7 @@ public class GooglePlayServices : MonoBehaviour
             {
                 count++;
                 Debug.Log("Connect to Google Play Services: Failed");
-                if (count < 5)
-                {
-                    Connect();
-                }
+                if (count < 5) Connect();
             }
         });
     }
@@ -72,15 +69,10 @@ public class GooglePlayServices : MonoBehaviour
     {
         closeButton.SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        if (doubleCancel > 1)
-        {
-            Application.Quit();
-        }
+        if (doubleCancel > 1) Application.Quit();
         else
-        {
             doubleCancel = 0;
             closeButton.SetActive(false);
-        }
     }
 }
 //Конфигурация и инициализация Google Play Services
