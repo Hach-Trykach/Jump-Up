@@ -7,7 +7,6 @@ public class ScrollSpace : MonoBehaviour {
     public bool slide;
 	private Vector3 screenPoint, offset, fPos, sPos;
 	private float lockedYPos;
-    private float peremen = 1;
     
 	void Update ()
     {

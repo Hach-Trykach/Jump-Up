@@ -7,7 +7,8 @@ using System.Collections;
 public class GooglePlayServices : MonoBehaviour
 {
 
-    public int count, doubleCancel;
+    public int doubleCancel;
+    public static int firstLaunch;
     public GameObject closeButton;
 
     //public int FirstTimeGooglePlayServices, Current_Time, raznica;
@@ -47,9 +48,9 @@ public class GooglePlayServices : MonoBehaviour
             }
             else
             {
-                count++;
+                firstLaunch++;
                 Debug.Log("Connect to Google Play Services: Failed");
-                if (count < 5) Connect();
+                if (firstLaunch < 5) Connect();
             }
         });
     }

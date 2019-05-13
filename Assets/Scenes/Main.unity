@@ -1475,6 +1475,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -1708,7 +1712,7 @@ GameObject:
   - component: {fileID: 176611287}
   - component: {fileID: 176611286}
   m_Layer: 5
-  m_Name: Backgraund
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2063,6 +2067,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -3012,10 +3020,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!1 &445200252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,6 +3319,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -4134,6 +4150,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -4553,10 +4573,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!65 &655838635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5146,10 +5170,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!114 &754261940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5519,10 +5547,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!65 &778167286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6602,6 +6634,10 @@ MonoBehaviour:
   price: {fileID: 1464141217}
   continueT: {fileID: 135398720}
   close: {fileID: 2001225946}
+  Ads: {fileID: 0}
+  withAds: {fileID: 0}
+  withoutAds: {fileID: 0}
+  privacy: {fileID: 0}
 --- !u!114 &1044223923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6634,7 +6670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056abf23fcc23d346b019670c6ea6f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
   doubleCancel: 0
   closeButton: {fileID: 2001225941}
 --- !u!114 &1044223925
@@ -6686,7 +6721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8833333, y: 0.92026395}
   m_AnchorMax: {x: 0.98055553, y: 0.98100007}
-  m_AnchoredPosition: {x: 199.99997, y: 0}
+  m_AnchoredPosition: {x: 200, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1073284898
@@ -6890,6 +6925,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -8087,10 +8126,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!114 &1316092789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9382,6 +9425,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -9993,10 +10040,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!114 &1673764090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10288,10 +10339,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!65 &1684214779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10906,10 +10961,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!65 &1736180179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11291,6 +11350,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -11986,10 +12049,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!114 &1951516215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12547,6 +12614,10 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
@@ -13123,10 +13194,14 @@ MonoBehaviour:
   siteBtn: {fileID: 754261935}
   WatchAdForDiamondBtn: {fileID: 410484403}
   continueBtn: {fileID: 778167280}
+  adsBackground: {fileID: 0}
+  withAdsBtn: {fileID: 0}
+  withoutAdsBtn: {fileID: 0}
+  privacyBtn: {fileID: 0}
   gift: {fileID: 624293079}
   giftImage: {fileID: 144704852}
   giftTimerText: {fileID: 864264789}
-  diamonds: {fileID: 0}
+  diamonds: {fileID: 1073284895}
 --- !u!114 &2089170866
 MonoBehaviour:
   m_ObjectHideFlags: 0

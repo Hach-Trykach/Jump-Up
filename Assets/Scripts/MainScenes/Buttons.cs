@@ -15,20 +15,14 @@ public class Buttons : MonoBehaviour
     public Sprite soundOn, soundOff, musicOn, musicOff;
     public GameObject buttons, shopCubes, shopBGs, shopMusics, gameName, tapToPlay, allCubes, shopBackground, loseBackground, mainCube, detectClicks, whichCube, whichBg, whichMusic, 
         shopBtn, achivBtn, leaderBtn, settingsBtn, musicBtn, soundBtn, vkBtn, backBtn, selectBtn, buyBtn, restartBtn, sCubesBtn, sBgBtn, sMusicBtn, siteBtn, WatchAdForDiamondBtn, 
-        continueBtn, gift, giftImage, giftTimerText, diamonds;
+        continueBtn, adsBackground, withAdsBtn, withoutAdsBtn, privacyBtn, gift, giftImage, giftTimerText, diamonds;
 
     void Start()
     {
         clickGift = true;
         GiftTimer.giftReceived = true;
-        if (Advertisement.isSupported)
-        {
-            Advertisement.Initialize("1466929", true);
-        }
-        else
-        {
-            Debug.Log("Device if not supported");
-        }
+        if (Advertisement.isSupported) Advertisement.Initialize("1466929", true);
+        else Debug.Log("Device if not supported");
         if (gameObject.name == "Settings")
         {
             if (PlayerPrefs.GetString("Music") == "off")
@@ -63,6 +57,9 @@ public class Buttons : MonoBehaviour
                 sCubesBtn.GetComponent<AudioSource>().mute = true;
                 sBgBtn.GetComponent<AudioSource>().mute = true;
                 sMusicBtn.GetComponent<AudioSource>().mute = true;
+                withAdsBtn.GetComponent<AudioSource>().mute = true;
+                withoutAdsBtn.GetComponent<AudioSource>().mute = true;
+                privacyBtn.GetComponent<AudioSource>().mute = true;
             }
         }
     }
@@ -206,6 +203,9 @@ public class Buttons : MonoBehaviour
                     sCubesBtn.GetComponent<AudioSource>().mute = false;
                     sBgBtn.GetComponent<AudioSource>().mute = false;
                     sMusicBtn.GetComponent<AudioSource>().mute = false;
+                    withAdsBtn.GetComponent<AudioSource>().mute = false;
+                    withoutAdsBtn.GetComponent<AudioSource>().mute = false;
+                    privacyBtn.GetComponent<AudioSource>().mute = false;
                 }
                 else
                 {
@@ -235,6 +235,9 @@ public class Buttons : MonoBehaviour
                     sCubesBtn.GetComponent<AudioSource>().mute = true;
                     sBgBtn.GetComponent<AudioSource>().mute = true;
                     sMusicBtn.GetComponent<AudioSource>().mute = true;
+                    withAdsBtn.GetComponent<AudioSource>().mute = true;
+                    withoutAdsBtn.GetComponent<AudioSource>().mute = true;
+                    privacyBtn.GetComponent<AudioSource>().mute = true;
                 }
                 break;
             case "Shop":
@@ -368,6 +371,14 @@ public class Buttons : MonoBehaviour
                     GiftTimer.giftReceived = false;
                     clickGift = false;
                 }
+                break;
+            case "withAdsBtn":
+                SceneManager.LoadScene("Main");
+                break;
+            case "withoutAdsBtn":
+                break;
+            case "privacyBtn":
+                Application.OpenURL("http://ddrvld.com/#privacy");
                 break;
         }
     }
