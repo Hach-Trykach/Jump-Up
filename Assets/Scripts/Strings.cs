@@ -17,7 +17,7 @@ public class Strings : MonoBehaviour {
             studyText = "Нажмите, держите, затем отпустите";
             topText = "Рекорд: ";
             toGiftText = "\nДо подарка";
-            priceText = "Всё по 20";
+            priceText = "20";
             continueText = "Продолжить?";
             closeText = "Нажмите ещё раз, чтобы выйти";
             AdsText = "Реклама помогает нам сохранить эту игру бесплатной. Наша политика конфиденциальности объясняет, как обрабатывается ваша информация, чтобы показывать вам соответствующие объявления.";
@@ -33,7 +33,7 @@ public class Strings : MonoBehaviour {
             studyText = "Touch, hold then release";
             topText = "Best: ";
             toGiftText = "\nTo gift";
-            priceText = "All for 20";
+            priceText = "20";
             continueText = "Continue?";
             closeText = "Click again to exit";
             AdsText = "Advertisements help us keep this game free. Our privacy policy explains how your information is processed in order to show you appropriate ads.";
@@ -49,7 +49,7 @@ public class Strings : MonoBehaviour {
             studyText = "Touch, hold then release";
             topText = "Best: ";
             toGiftText = "\nTo gift";
-            priceText = "All for 20";
+            priceText = "20";
             continueText = "Continue?";
             closeText = "Click again to exit";
             AdsText = "Advertisements help us keep this game free. Our privacy policy explains how your information is processed in order to show you appropriate ads.";
