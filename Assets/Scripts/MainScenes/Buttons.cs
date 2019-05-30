@@ -122,7 +122,7 @@ public class Buttons : MonoBehaviour
                 //------------------------------------------//
 
                 ////////////////////////////////////////////////////////
-                //PlayerPrefs.SetInt ("Diamonds", 10);
+                //PlayerPrefs.SetInt ("Diamonds", 100);
                 //-------------------------Сброс Кол-ва бэкграундов и мелодий-------------------//
                 //PlayerPrefs.SetInt ("QuantityBGs", 0);
                 //PlayerPrefs.SetInt ("Musics", 0);
